@@ -17,6 +17,7 @@ The lab uses a Windows Server 2025 domain controller and a domain-joined Windows
 | **Identity & RBAC** | AD users, security groups, and NTFS/SMB permissions | Authorized role access succeeded; cross-role access was denied |
 | **Policy Enforcement** | Domain Group Policy, Windows Defender Firewall, and account lockout controls | Security policies were applied and validated on the domain-joined client |
 | **Privileged Access** | Separate `eloho-admin` identity with narrowly delegated administrative authority | Delegated password reset succeeded; broader user creation was denied |
+| **Auditing & Accountability** | Credential validation and file-share auditing | Audit policy validated; attributable file-share activity captured |
 | **Recovery** | Windows Server Backup of DC01 System State | Backup completed and the System State recovery point was recognized as available |
 
 ## Lab Environment
@@ -36,8 +37,9 @@ The repository contains a curated evidence set rather than every screenshot prod
 - [Policy & Enforcement](evidence/03-policy-enforcement/)
 - [Privileged Access](evidence/04-privileged-access/)
 - [Recovery](evidence/05-recovery/)
-
-The evidence demonstrates both **successful authorization** and **intentional denial**, allowing controls to be evaluated by their observed behaviour rather than configuration alone.
+- [Auditing & Accountability](evidence/06-auditing-accountability/)
+ 
+The evidence demonstrates successful authorization, intentional denial, and attributable security activity, allowing controls to be evaluated through both observed behaviour and audit records.
 
 ## Recovery Scope
 
